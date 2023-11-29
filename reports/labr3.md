@@ -291,7 +291,7 @@ pub const SDCARD_TESTCASES: &[&str] = &[
 
 先直接运行试试：
 
-![image-20231128195803411](/home/melody/.config/Typora/typora-user-images/image-20231128195803411.png)
+![image-20231128195803411](https://jgox-image-1316409677.cos.ap-guangzhou.myqcloud.com/blog/image-20231128195803411.png)
 
 那么问题也很显然，我们之前对`rename`的参数的处理太简单了，没有考虑到所有情况，我们在代码中改变对`path`的处理逻辑即可。代码中还加了一些判断，我们通过文件路径获取文件的`metadata`来判断文件类型去区分 `bin` 到底是个文件还是个目录。还有很多逻辑判断如复制一个目录到文件，这里就不去判断了。。。
 
